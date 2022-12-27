@@ -50,4 +50,8 @@ public class ProductService {
         }
 
     }
+
+    public List<Product> searchByName(String keyword){
+        return productRepository.searchByName(keyword);
+    }
 }

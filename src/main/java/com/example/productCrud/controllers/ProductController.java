@@ -25,6 +25,11 @@ public class ProductController {
         return productService.getProducts();
     }
 
+    @GetMapping("products/search")
+    public List<Product> seachByName(@RequestParam String keyword){
+        return productService.searchByName(keyword);
+    }
+
     @PostMapping("products")
     public void addProduct(@RequestBody Product product){
         productService.addProduct(product);
